@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Dispensary_registration</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <property name="hibernate.show_sql">true</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+
+        <mapping class="entity.DoctorsSpecialtiesEntity"/>
+        <mapping class="entity.DoctorEntity"/>
+        <mapping class="entity.DiseaseEntity"/>
+        <mapping class="entity.TemplateEntity"/>
+        <mapping class="entity.TemplatesDiseasesEntity"/>
+        <mapping class="entity.PatientEntity"/>
+        <mapping class="entity.TemplatePatientEntity"/>
+        <mapping class="entity.VisitEntity"/>
+    </session-factory>
+</hibernate-configuration>
